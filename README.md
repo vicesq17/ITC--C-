@@ -14,5 +14,8 @@ La tercera función de trabajador es para conocer el tiempo de operación del em
 
 
 # Implementación del diagrama UML
+
+El diagrama UML presentado representa la estructura principal del programa, mostrando las relaciones entre las tres clases fundamentales: Trabajador, Ingresos y Egresos. Este diseño sigue un enfoque modular que permite una alta cohesión y bajo acoplamiento entre los componentes.
+
 ![Captura de pantalla 2024-11-19 a la(s) 11 53 27 p m](https://github.com/user-attachments/assets/cccc13d2-0cb3-4c60-a3d2-38fb7d785e82)
 
