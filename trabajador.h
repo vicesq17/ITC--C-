@@ -1,3 +1,6 @@
+#ifndef TRABAJADOR
+#define TRABAJADOR
+
 #include <string>
 using namespace std;
 class Trabajador{
@@ -9,8 +12,7 @@ private:
 
 public:
     Trabajador();
-    Trabajador(string nom, float sal, int mes):
-    nombre(nom),salario(sal),meses(mes){};
+    Trabajador(string nom, float sal, int mes);
 
     string get_nombre();
     float get_salario();
@@ -21,30 +23,5 @@ public:
     void set_meses(int);
 
 };
-
-Trabajador::Trabajador(){
-    nombre="";
-    salario=0.0;
-    meses=0;
-}
-
-string Trabajador::get_nombre(){
-    return nombre;
-}
-float Trabajador::get_salario(){
-    return salario;
-}
-int Trabajador::get_meses(){
-    return meses;
-}
-
-void Trabajador::set_nombre(string nom){
-    nombre=nom;
-}
-void Trabajador::set_salario(float sal){
-    salario=sal;
-}
-void Trabajador::set_meses(int mes){
-    meses=mes;
-}
+#endif
 
