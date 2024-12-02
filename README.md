@@ -67,6 +67,61 @@ La clase Empresa contiene una lista de objetos Nomina.
 La clase Nomina contiene una lista de objetos Trabajador.
 Esto refleja una relación "tiene-una" entre estas clases.
 
+Análisis de la Herencia y Subclases en el Proyecto
+El programa utiliza herencia como un enfoque clave para estructurar las clases y extender funcionalidades específicas. Aquí está el análisis detallado de la herencia y las subclases involucradas:
+
+1. Herencia
+El programa implementa herencia simple, donde una clase base (Trabajador) proporciona atributos y métodos comunes para todas las subclases relacionadas con trabajadores. Las subclases (TrabajadorSubcontratado y TrabajadorNoSubcontratado) heredan de esta clase base y añaden o modifican comportamientos según sus necesidades específicas.
+
+Clase Base:
+
+Trabajador
+Atributos comunes: nombre, salario, tipo, entre otros.
+Métodos comunes: cálculo del salario base, obtención de detalles, etc.
+Subclases:
+
+TrabajadorSubcontratado
+Extiende la funcionalidad de Trabajador para manejar características específicas de empleados subcontratados (por ejemplo, tal vez incluye una tarifa por horas trabajadas o un contrato limitado).
+TrabajadorNoSubcontratado
+Extiende Trabajador para trabajadores internos, posiblemente añadiendo beneficios específicos, como prestaciones laborales o bonos.
+2. Composición
+Además de la herencia, el programa utiliza composición para estructurar relaciones entre objetos. Por ejemplo:
+
+La clase Empresa contiene una lista de objetos Nomina.
+La clase Nomina contiene una lista de objetos Trabajador.
+Esto refleja una relación "tiene-una" entre estas clases.
+3. Jerarquía de Clases
+Aquí tienes una visión jerárquica del diseño:
+
+plaintext
+Copiar código
+Trabajador (Clase Base)
+├── TrabajadorSubcontratado (Subclase)
+└── TrabajadorNoSubcontratado (Subclase)
+
+Nomina
+└── Trabajador (Relación de composición: una nómina tiene varios trabajadores)
+
+Empresa
+└── Nomina (Relación de composición: una empresa tiene varias nóminas)
+4. Relación entre Clases
+Empresa:
+
+##Contiene múltiples objetos Nomina.
+Administra el registro y la gestión de las nóminas.
+Nomina:
+
+Es responsable de manejar a los trabajadores.
+Contiene una lista de objetos Trabajador (pueden ser subcontratados o no).
+Trabajador (y sus subclases):
+
+Define las características y comportamientos básicos de todos los empleados.
+Las subclases añaden o modifican funcionalidades específicas.
+5. Polimorfismo
+Aunque no lo has mencionado explícitamente, es probable que el programa pueda implementar polimorfismo si utiliza un enfoque como:
+
+Declarar métodos virtuales en la clase base Trabajador.
+Sobrescribir esos métodos en las subclases (TrabajadorSubcontratado y TrabajadorNoSubcontratado) para proporcionar comportamientos específicos.
 
 
 
