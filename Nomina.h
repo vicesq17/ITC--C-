@@ -8,57 +8,50 @@
 #include <string>
 
 class Nomina {
-private:
-    std::string nombre;
-    Trabajador obreroc[100];
-    Trabajador obreron[100];
-    int max_c;
-    int max_n;
+    private:
+        std::string nombre;
+        Trabajador TrabajadoresSubcontratados[100];
+        Trabajador TrabajadoresNoSubcontratados[100];
+        int cantidadSubcontratados;
+        int cantidadNoSubcontratados;
+    public:
+        Nomina(){
+            nombre = "";
+            cantidadSubcontratados = 0;
+            cantidadNoSubcontratados = 0;
+        }   
+        Nomina(std::string nom){
+            nombre = nom;
+            cantidadSubcontratados = 0;
+            cantidadNoSubcontratados = 0;
+        }
 
-public:
+        void agregarSubcontratado(TrabajadorSubcontratado obr);
+        void agregarNoSubcontratado(TrabajadorDirecto obr);
 
-    Nomina(){
-        nombre = "";
-        max_c = 0;
-        max_n = 0;
-    }   
-    Nomina(std::string nom){
-        nombre = nom;
-        max_c = 0;
-        max_n = 0;
-    }
-
-    void agrega_c(Cont obr);
-    void agrega_n(No_cont obr);
-
-    void mostrar_c();
-    void mostrar_n();
+        void mostrarSubcontratados();
+        void mostrarNoSubcontratados();
 };
 
-void Nomina:: agrega_c(Cont obr){
-    if (max_c < 100){
-        obreroc[max_c] = obr;
-        max_c++;
-    }
+void Nomina::agregarSubcontratado(TrabajadorSubcontratado obr){
+    if (cantidadSubcontratados < 100){
+        TrabajadoresSubcontratados[cantidadSubcontratados] = obr;
+        cantidadSubcontratados++;}
 }
 
-void Nomina:: agrega_n(No_cont obr){
-    if (max_n < 100){
-        obreron[max_n] = obr;
-        max_n++;
-    }
+void Nomina::agregarNoSubcontratado(TrabajadorDirecto obr){
+    if (cantidadNoSubcontratados < 100){
+        TrabajadoresNoSubcontratados[cantidadNoSubcontratados] = obr;
+        cantidadNoSubcontratados++;}
 }
 
-void Nomina:: mostrar_c(){
-    for(int i=0; i<max_c; i++){
-        std::cout << "Nombre: " << obreroc[i].get_nombre() << std::endl;
-    }
+void Nomina::mostrarSubcontratados(){
+    for(int i=0; i<cantidadSubcontratados; i++){
+        std::cout << "Nombre: " << TrabajadoresSubcontratados[i].getNombre() << std::endl;}
 }
 
-void Nomina:: mostrar_n(){
-    for(int i=0; i<max_n; i++){
-        std::cout << "Nombre: " << obreron[i].get_nombre() << std::endl;
-    }
+void Nomina::mostrarNoSubcontratados(){
+    for(int i=0; i<cantidadNoSubcontratados; i++){
+        std::cout << "Nombre: " << TrabajadoresNoSubcontratados[i].getNombre() << std::endl;}
 }
-
 #endif
