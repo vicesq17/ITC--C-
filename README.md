@@ -61,5 +61,6 @@ PV.jpg: Diagrama UML que detalla las relaciones entre las clases.
 
 # Implementación del diagrama UML
 
-<img width="681" alt="Captura de Pantalla 2024-12-01 a la(s) 23 58 53" src="https://github.com/user-attachments/assets/c5bbcaad-2cd2-4f46-9fca-103352639c3e">
+
+<img width="756" alt="Captura de Pantalla 2024-12-02 a la(s) 0 37 58" src="https://github.com/user-attachments/assets/b99496b0-90cf-46da-81b6-366a3714fd4e">
 
