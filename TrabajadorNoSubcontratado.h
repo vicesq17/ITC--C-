@@ -4,31 +4,31 @@
 #include "Trabajador.h"
 #include <string>
 
-class No_cont : public Trabajador {
+class TrabajadorDirecto: public Trabajador{
 private:
     float extras;
-
 public:
-    No_cont(){
+    TrabajadorDirecto(){
         nombre = "";
         salario = 0.0;
         extras = 0.0;
     }
-    No_cont(std::string nom, float sal, float hor){
+    TrabajadorDirecto(std::string nom, float sal, float hor){
         nombre = nom;
         salario = sal;
         extras = hor;
     }
 
-    float get_horas(){
+    float getHoras(){
         return extras;
     }
-    void set_horas(float num){
+    void setHoras(float num){
         extras = num;
     }
 
     float calcula(){
         salario = salario*extras;
+        return salario;
     }
 };
 
