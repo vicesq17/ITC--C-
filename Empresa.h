@@ -24,27 +24,23 @@ public:
         listaEmpleados = nomina;
     }
 
-    std::string get_nombre(){
+    std::string getNombre(){
         return nombre;
     }
-    std::string get_direccion(){
+    std::string getDireccion(){
         return direccion;
     }
-    
-    void set_nombre(std::string nom){
-        nombre = nom;
-    }
-    void set_direccion(std::string dir){
-        direccion = dir;
+
+    Nomina getNomina() {
+        return listaEmpleados;
     }
 
-    void mostrar(){
+    void mostrarDetalles(){
         std::cout << "Nombre: " << nombre << std::endl;
         std::cout << "Direccion: " << direccion << std::endl;
-        listaEmpleados.mostrar_c();
-        listaEmpleados.mostrar_n();
+        listaEmpleados.mostrarSubcontratados();
+        listaEmpleados.mostrarNoSubcontratados();
     }
-
 };
-
 #endif
+
