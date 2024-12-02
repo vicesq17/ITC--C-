@@ -37,8 +37,5 @@ Trabajador es la clase base y tiene dos subclases: TrabajadorSubcontratado y Tra
 
 # Implementación del diagrama UML
 
-![Uploading Captura de Pantalla 2024-12-01 a la(s) 23.52.55.png…]()
-
-
-![Captura de pantalla 2024-11-19 a la(s) 11 53 27 p m](https://github.com/user-attachments/assets/cccc13d2-0cb3-4c60-a3d2-38fb7d785e82)
+<img width="681" alt="Captura de Pantalla 2024-12-01 a la(s) 23 58 53" src="https://github.com/user-attachments/assets/c5bbcaad-2cd2-4f46-9fca-103352639c3e">
 
