@@ -4,19 +4,15 @@
 #include <string>
 
 class Trabajador {
-protected:
-    std::string nombre;
-    float salario;
-
-public:
-    Trabajador();
-    Trabajador(std::string, float);
-    
-    float get_salario();
-    std::string get_nombre();
-
-    void set_nombre(std::string);
-    void set_salario(float);
+    protected:
+        std::string nombre;
+        float salario;
+    public:
+        Trabajador();
+        Trabajador(std::string nom, float num);
+        float getSalario();
+        std::string getNombre();
+        void setSalario(float num);
 };
 
 Trabajador::Trabajador(){
@@ -29,19 +25,16 @@ Trabajador::Trabajador(std::string nom, float num){
     salario = num;
 }
 
-std::string Trabajador:: get_nombre(){
+std::string Trabajador:: getNombre(){
     return nombre;
 }
 
-float Trabajador:: get_salario(){
+float Trabajador:: getSalario(){
     return salario;
 }
 
-void Trabajador:: set_nombre(std::string nom){
-    nombre = nom;
-}
-void Trabajador:: set_salario(float num){
+void Trabajador:: setSalario(float num){
     salario = num;
 }
-
 #endif
+
