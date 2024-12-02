@@ -1,0 +1,116 @@
+Archivo: main.cpp
+Cambios contrastados:
+* Primera entrega:
+   * Código limitado con un flujo estático que no permitía interacción dinámica.
+   * Uso de objetos inicializados manualmente (Empresa empresa("Tech Solutions", ...)).
+   * Métodos como empresa.mostrar() para mostrar datos de una única empresa.
+* Segunda entrega:
+   * Implementación de un sistema de menú dinámico, con opciones para:
+      * Crear empresas.
+      * Agregar trabajadores subcontratados o no subcontratados.
+      * Consultar detalles específicos por empresa.
+   * Uso de estructuras como Empresa empresas[100] para manejar múltiples empresas.
+   * Flujo interactivo con do-while y manejo de entradas del usuario (std::cin).
+________________
+
+
+Archivo: Nomina.h
+Cambios contrastados:
+* Primera entrega:
+   * Uso de nombres como obreroc[100] y obreron[100] para representar trabajadores subcontratados y no subcontratados.
+   * Métodos como agrega_c() y agrega_n() para agregar trabajadores.
+   * Manejo de detalles con métodos mostrar_c() y mostrar_n().
+* Segunda entrega:
+   * Introducción de atributos más descriptivos:
+      * TrabajadoresSubcontratados[100].
+      * TrabajadoresNoSubcontratados[100].
+   * Nuevos métodos:
+      * agregarSubcontratado().
+      * agregarNoSubcontratado().
+   * Métodos específicos para mostrar trabajadores subcontratados y no subcontratados:
+      * mostrarSubcontratados().
+      * mostrarNoSubcontratados().
+________________
+
+
+Archivo: Trabajador.h
+Cambios contrastados:
+* Primera entrega:
+   * Uso de métodos menos consistentes, como get_nombre() y set_salario().
+   * Falta de encapsulación clara en el diseño del archivo.
+* Segunda entrega:
+   * Introducción de un diseño más limpio:
+      * Atributos protegidos (nombre, salario).
+      * Métodos más consistentes: getNombre(), getSalario(), setSalario().
+   * Añadido de constructores para inicializar objetos de forma predeterminada o personalizada.
+________________
+
+
+Archivo: TrabajadorNoSubcontratado.h
+Cambios contrastados:
+* Primera entrega:
+   * Métodos y constructores básicos, como No_cont() y get_horas().
+* Segunda entrega:
+   * Introducción de una clase mejorada y renombrada: TrabajadorDirecto.
+   * Nuevos métodos como getHoras() y setHoras().
+   * Mejora en los constructores para inicializar atributos de manera consistente.
+________________
+
+
+Archivo: TrabajadorSubcontratado.h
+Cambios contrastados:
+* Primera entrega:
+   * Manejo limitado de atributos como comision mediante métodos como get_comision() y set_comision().
+   * Clase y métodos genéricos, como Cont().
+* Segunda entrega:
+   * Atributos y métodos específicos para trabajar con comisiones, como calcula(), que ajusta el salario sumando la comisión.
+   * Renombramiento de la clase y sus métodos para mayor claridad:
+      * De Cont a TrabajadorSubcontratado.
+________________
+
+
+Resumen general de diferencias
+* Renombramiento:
+Métodos y clases fueron renombrados para ser más claros y seguir estándares de estilo.
+* Modularidad:
+Los cambios implementados introducen mejor encapsulación y modularidad en cada archivo.
+* Interactividad:
+El archivo main.cpp pasó de ser estático a dinámico, permitiendo un flujo más interactivo para el usuario.
+* Estructuras claras:
+En Nomina.h y Empresa.h, las estructuras se mejoraron con atributos y métodos descriptivos, eliminando duplicidad y simplificando la lógica.
+* Herencia y composición:
+Los archivos relacionados con trabajadores (Trabajador.h, TrabajadorSubcontratado.h, TrabajadorNoSubcontratado.h) muestran un uso más evidente de herencia y polimorfismo, mejorando el diseño orientado a objetos.
+   * 
+
+Líneas corregidas (con respecto a la entrega anterior):
+Listado de líneas, clase EMPRESA.
+27,30,33,34,35,36,37,38,41,44,45,47,49
+
+
+Listado de líneas, clase NÓMINA.
+11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,38,39,40,41,42,45,46,47,48,49,52,53,54,55,58,59,60,61,63
+
+
+Listado de líneas, clase TRABAJADOR
+7,8,9,10,11,12,13,14,15,16,17.,18,19,32,36,40,41,42,43,46
+
+
+Listado de líneas, clase TRABAJADOR No SubContratado
+7,10,12,17,23,26
+
+
+Listado de líneas, clase TRABAJADOR SubContratado
+6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,35
+
+
+Main
+9,10,11,12,13,14,16,17,19
+
+Toma de decisiones (SICT032A):
+El proyecto avanzó con el uso de herencia y composición al crear clases como TrabajadorSubcontratado y TrabajadorNoSubcontratado, las cuales amplían la funcionalidad de la clase base Trabajador. Esto se refleja en métodos específicos como calcula() para ajustar salarios en base a comisiones, mostrando un diseño bien pensado para abordar diferentes tipos de trabajadores.
+Implementa (SICT033A):
+
+La implementación destacó en la creación de métodos claros y funcionales, como agregarSubcontratado() y mostrarNoSubcontratados() en la clase Nomina, los cuales mejoran la modularidad y organización del proyecto. Además, se utilizaron principios de encapsulación mediante atributos protegidos como nombre y salario, accesibles a través de métodos consistentes como getNombre() y setSalario(), garantizando un diseño robusto y reutilizable.
+Estándares (SICT041A):
+
+El proyecto cumple con estándares de programación a través de nombres claros y descriptivos, además de un control de versiones efectivo con Git, reflejado en commits bien documentados. También incluye un README detallado que explica el propósito del sistema y los archivos clave, junto con una estructura de código organizada que facilita la lectura y el mantenimiento, como se demuestra en el uso del menú interactivo en main.cpp.
